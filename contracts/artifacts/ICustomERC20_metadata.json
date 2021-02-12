@@ -1,0 +1,114 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					}
+				],
+				"name": "allowance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "addedValue",
+						"type": "uint256"
+					}
+				],
+				"name": "increaseAllowance",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "mintTokens",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "name",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Interface for the Custom ERC20 Token contract for ChainBridge implementation ERC-20 Address: 0xEEc83DC1B7D0dE3f0f1277619fbbE8150E70Ef39*",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"browser/ICustomERC20.sol": "ICustomERC20"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"browser/ICustomERC20.sol": {
+			"keccak256": "0xca4ab3a476655738fbd64aa67b4b7ad0bbe09b009047c63cebff0edb3d5490be",
+			"urls": [
+				"bzz-raw://c0a5bd074472e9a950dd14d9fbc9228692d761c3365470bca4b5b0075ca55ba0",
+				"dweb:/ipfs/QmbQ9jLYwrewpzzhZRo3p6xjhf3yLhf5g5reG7XQb1bBmL"
+			]
+		}
+	},
+	"version": 1
+}

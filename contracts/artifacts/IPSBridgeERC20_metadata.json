@@ -1,0 +1,72 @@
+{
+	"compiler": {
+		"version": "0.6.4+commit.1dca32f3"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_recipient",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_value",
+						"type": "uint256"
+					}
+				],
+				"name": "sendERC20SToken",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"methods": {
+				"sendERC20SToken(address,uint256)": {
+					"params": {
+						"_recipient": "Address recipient of the tokens in the other chain",
+						"_value": "Amount of tokens to be sent"
+					}
+				}
+			},
+			"title": "Simple Interface to interact with bridge to transfer the ERC20S token"
+		},
+		"userdoc": {
+			"methods": {
+				"sendERC20SToken(address,uint256)": {
+					"notice": "Creates a deposit in the Bridge Contract for an ERC-20 Transfer,"
+				}
+			},
+			"notice": "Bridge Address 0xA997c47d55991Ef5251b31D380CeFCaAD6978e03"
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"browser/IPSBridgeERC20.sol": "IPSBridgeERC20"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"browser/IPSBridgeERC20.sol": {
+			"keccak256": "0x95f4392cc6350e2f8175c86a09a8fe04f92d903b23f7554df7d82284e5e745ee",
+			"urls": [
+				"bzz-raw://23a4459110591c18fd8871c63b9a4b56cd63f08a9e93f6569b477391f9d8bb71",
+				"dweb:/ipfs/QmXBDxWYBi3iHhoHBZ2epmj9aqYAsAEg7YhC7L5bK4AgLg"
+			]
+		}
+	},
+	"version": 1
+}

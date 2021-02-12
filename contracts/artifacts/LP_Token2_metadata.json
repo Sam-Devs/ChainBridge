@@ -1,0 +1,566 @@
+{
+	"compiler": {
+		"version": "0.5.17+commit.d19bba13"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_spender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_value",
+						"type": "uint256"
+					}
+				],
+				"name": "Approval",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "_rebaseOracle",
+						"type": "address"
+					}
+				],
+				"name": "LogNewRebaseOracle",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_totalSupply",
+						"type": "uint256"
+					}
+				],
+				"name": "LogRebase",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_from",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_from",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_value",
+						"type": "uint256"
+					}
+				],
+				"name": "Transfer",
+				"type": "event"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "acceptOwnership",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner_",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					}
+				],
+				"name": "allowance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "approve",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "who",
+						"type": "address"
+					}
+				],
+				"name": "balanceOf",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "decimals",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "subtractedValue",
+						"type": "uint256"
+					}
+				],
+				"name": "decreaseAllowance",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "addedValue",
+						"type": "uint256"
+					}
+				],
+				"name": "increaseAllowance",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "name",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "newOwner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "supplyDelta",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "increaseSupply",
+						"type": "bool"
+					}
+				],
+				"name": "rebase",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "rebaseOracle",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newRebaseOracle",
+						"type": "address"
+					}
+				],
+				"name": "setRebaseOracle",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "symbol",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "totalSupply",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "transfer",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "transferFrom",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"methods": {
+				"acceptOwnership()": {
+					"details": "Accept new owner."
+				},
+				"allowance(address,address)": {
+					"details": "Function to check the amount of tokens that an owner has allowed to a spender.",
+					"params": {
+						"owner_": "The address which owns the funds.",
+						"spender": "The address which will spend the funds."
+					},
+					"return": "The number of tokens still available for the spender."
+				},
+				"approve(address,uint256)": {
+					"details": "Approve the passed address to spend the specified amount of tokens on behalf of msg.sender. This method is included for ERC20 compatibility. IncreaseAllowance and decreaseAllowance should be used instead.",
+					"params": {
+						"spender": "The address which will spend the funds.",
+						"value": "The amount of tokens to be spent."
+					}
+				},
+				"balanceOf(address)": {
+					"params": {
+						"who": "The address to query."
+					},
+					"return": "The balance of the specified address."
+				},
+				"decreaseAllowance(address,uint256)": {
+					"details": "Decrease the amount of tokens that an owner has allowed to a spender.",
+					"params": {
+						"spender": "The address which will spend the funds.",
+						"subtractedValue": "The amount of tokens to decrease the allowance by."
+					}
+				},
+				"increaseAllowance(address,uint256)": {
+					"details": "Increase the amount of tokens that an owner has allowed to a spender. This method should be used instead of approve() to avoid the double approval vulnerability.",
+					"params": {
+						"addedValue": "The amount of tokens to increase the allowance by.",
+						"spender": "The address which will spend the funds."
+					}
+				},
+				"rebase(uint256,bool)": {
+					"details": "Notifies Benchmark contract about a new rebase cycle.",
+					"params": {
+						"increaseSupply": "Whether to increase or decrease the total supply.",
+						"supplyDelta": "The number of new molecule tokens to add into or remove from circulation."
+					},
+					"return": "The total number of molecules after the supply adjustment."
+				},
+				"setRebaseOracle(address)": {
+					"params": {
+						"newRebaseOracle": "The address of the new oracle for rebasement (used for authentication)."
+					}
+				},
+				"transfer(address,uint256)": {
+					"details": "Transfer tokens to a specified address.",
+					"params": {
+						"to": "The address to transfer to.",
+						"value": "The amount to be transferred."
+					},
+					"return": "True on success, false otherwise."
+				},
+				"transferFrom(address,address,uint256)": {
+					"details": "Transfer tokens from one address to another.",
+					"params": {
+						"from": "The address you want to send tokens from.",
+						"to": "The address you want to transfer to.",
+						"value": "The amount of tokens to be transferred."
+					}
+				},
+				"transferOwnership(address)": {
+					"details": "Propose a new owner.",
+					"params": {
+						"_newOwner": "The address of the new owner."
+					}
+				}
+			}
+		},
+		"userdoc": {
+			"methods": {},
+			"notice": "***************************************"
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"browser/LP_Token2.sol": "LP_Token2"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"browser/LP_Token2.sol": {
+			"keccak256": "0xd1c5023bf37dbc967ea5549f887ea901c14df897b38151c4ac649ed9bfc87a1c",
+			"urls": [
+				"bzz-raw://39d81a57c140e60ed77b4e7e6b1a13f79a72753841ec295fe2b680a158c719be",
+				"dweb:/ipfs/QmUodbH81cS9LHDYukx8BX89VUwwmosaEK8dWk1UrAzD4j"
+			]
+		}
+	},
+	"version": 1
+}
